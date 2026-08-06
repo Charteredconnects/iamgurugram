@@ -254,22 +254,17 @@
     aspect-ratio: 1 / 1;
     border: 3px solid var(--ink);
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 14px;
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: 800;
-    font-size: clamp(15px, 2.6vw, 22px);
-    line-height: 1.15;
-    text-decoration: none;
+    overflow: hidden;
+    display: block;
     transition: transform 0.15s ease;
   }
   .feed-tile:hover{ transform: translateY(-4px) rotate(-1deg); }
-  .feed-tile.a{ background: var(--red); color: var(--white); }
-  .feed-tile.b{ background: var(--ink); color: var(--white); }
-  .feed-tile.c{ background: var(--white); color: var(--red-dark); }
+  .feed-tile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
   /* CTA BAND */
   .band{
@@ -425,9 +420,15 @@
         <p>Real posts land here soon, synced straight from Instagram.</p>
       </div>
       <div class="feed-grid">
-        <a class="feed-tile a" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">Coming</a>
-        <a class="feed-tile b" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">soon.</a>
-        <a class="feed-tile c" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">iamgurugram.in</a>
+        <a class="feed-tile" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">
+          <img src="feed-1.png" alt="Coming — Gurugram">
+        </a>
+        <a class="feed-tile" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">
+          <img src="feed-2.png" alt="Soon.">
+        </a>
+        <a class="feed-tile" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">
+          <img src="feed-3.png" alt="iamgurugram.in — follow for the reveal">
+        </a>
       </div>
     </div>
   </section>
