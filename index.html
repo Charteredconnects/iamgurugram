@@ -243,6 +243,34 @@
     margin: 0;
   }
 
+  /* FEED */
+  .feed-section{ padding: 0 0 90px; }
+  .feed-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .feed-tile{
+    aspect-ratio: 1 / 1;
+    border: 3px solid var(--ink);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    font-size: clamp(15px, 2.6vw, 22px);
+    line-height: 1.15;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+  }
+  .feed-tile:hover{ transform: translateY(-4px) rotate(-1deg); }
+  .feed-tile.a{ background: var(--red); color: var(--white); }
+  .feed-tile.b{ background: var(--ink); color: var(--white); }
+  .feed-tile.c{ background: var(--white); color: var(--red-dark); }
+
   /* CTA BAND */
   .band{
     background: var(--ink);
@@ -386,6 +414,20 @@
           <h3>What's on</h3>
           <p>Events worth showing up for, gathered weekly so you don't have to hunt for them.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feed-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From the feed</h2>
+        <p>Real posts land here soon, synced straight from Instagram.</p>
+      </div>
+      <div class="feed-grid">
+        <a class="feed-tile a" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">Coming</a>
+        <a class="feed-tile b" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">soon.</a>
+        <a class="feed-tile c" href="https://www.instagram.com/iamgurugram.in" target="_blank" rel="noopener">iamgurugram.in</a>
       </div>
     </div>
   </section>
